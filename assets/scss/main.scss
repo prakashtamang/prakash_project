@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
         .swiper-pagination-bullet {
             height: 12px;
             width: 12px;
-            background-color: #E8EDEA;
+            background-color: #6c8777;
         }
 
         .swiper-pagination-bullet-active {
@@ -421,6 +421,94 @@ h1, h2, h3, h4, h5, h6 {
         .service-title {
             font-size: 24px;
             font-weight: 500;
+        }
+    }
+}
+
+// FAQ Section
+.faq {
+    padding: 80px 0;
+
+    .section-title {
+        text-align: left;
+        padding-bottom: 20px;
+
+        h2 {
+            font-size: 52px;
+        }
+
+        p {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+
+    .featured-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .faq-container {
+        .faq-item {
+            position: relative;
+            margin-bottom: 20px;
+
+            h3 {
+                cursor: pointer;
+                font-size: 16px;
+                color: #6B7280;
+                font-weight: 400;
+                padding: 22px 30px;
+                background: #FAFAFA;
+                border-radius: 5px;
+                margin-bottom: 0;
+            }
+
+            .faq-content {
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: 0.3s ease-in-out;
+                visibility: hidden;
+                opacity: 0;
+                text-align: justify;
+                padding: 10px 40px;
+                background: #FFF;
+                
+                p {
+                    margin-bottom: 0;
+                    overflow: hidden;
+                }
+            }
+    
+            .faq-toggle {
+                position: absolute;
+                right: 30px;
+                top: 20px;
+                width: 24px;
+                height: 24px;
+                transition: 0.3s ease;
+            }
+        }
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+        .faq-active {
+            h3 {
+                color: #313131;
+                background: #C2EF52;
+                border: 1px solid #313131;
+            }
+
+            .faq-content {
+                grid-template-rows: 1fr;
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .faq-toggle {
+                transform: rotate(-180deg);
+            }
         }
     }
 }
