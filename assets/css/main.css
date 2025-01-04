@@ -377,12 +377,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .faq .faq-container .faq-item h3 {
   cursor: pointer;
+  padding: 22px 50px 22px 30px;
+  background: #FAFAFA;
+  border-radius: 5px;
   font-size: 16px;
   color: #6B7280;
   font-weight: 400;
-  padding: 22px 30px;
-  background: #FAFAFA;
-  border-radius: 5px;
   margin-bottom: 0;
 }
 .faq .faq-container .faq-item .faq-content {
@@ -400,20 +400,21 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 .faq .faq-container .faq-item .faq-toggle {
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 20px;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   transition: 0.3s ease;
 }
 .faq .faq-container .faq-item:last-child {
   margin-bottom: 0;
 }
 .faq .faq-container .faq-active h3 {
-  color: #313131;
   background: #C2EF52;
   border: 1px solid #313131;
+  color: #313131;
 }
 .faq .faq-container .faq-active .faq-content {
   grid-template-rows: 1fr;
@@ -422,6 +423,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(-180deg);
+}
+@media (max-width: 991.98px) {
+  .faq .section-title h2 {
+    font-size: 42px;
+  }
+}
+@media (max-width: 767.98px) {
+  .faq .section-title h2 {
+    font-size: 32px;
+  }
+  .faq .faq-container .faq-item .faq-toggle {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .cta {
