@@ -512,3 +512,129 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+// CTA Section
+.cta {
+    position: relative;
+    padding: 120px 0;
+    border-radius: 12px;
+    background-color: #F8FDEA;
+    text-align: center;
+    overflow: hidden;
+
+    .ellipse-sm {
+        height: 640px;
+        width: 640px;
+        border: 1px solid #138232;
+        opacity: 0.2;
+        filter: blur(2px);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .ellipse-bg {
+        height: 930px;
+        width: 930px;
+        border: 1px solid #138232;
+        opacity: 0.2;
+        filter: blur(2px);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        
+    }
+    .img-1, .img-2, .img-3, .img-4 {
+        position: absolute;
+    }
+    .img-1 {
+        left: 0;
+        top: 10px;
+    }
+
+    .img-2 {
+        left: 40px;
+        bottom: 0;
+    }
+
+    .img-3 {
+        right: 40px;
+        bottom: 0;
+    }
+
+    .img-4 {
+        right: 0;
+        top: 40px;
+    }
+    .cta-content {
+        position: relative;
+        .cta-title {
+            h2 {
+                font-size: 52px;
+                font-weight: 700;
+                line-height: 56px;
+            }
+        }
+    
+        .btn-cta {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #18A23F;
+            box-shadow: 0px 2px 6px 0px rgba(16, 24, 40, 0.06);
+            font-weight: 500;
+            margin-top: 30px;
+            padding: 10px 20px;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .cta-content {
+            .cta-title {
+                h2 {
+                    font-size: 42px;
+                    line-height: 46px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .ellipse-sm, .ellipse-lg, .img-2, .img-3 {
+            display: none;
+        }
+
+        .img-1 {
+            top: -50px;
+            left: -20px;
+        }
+
+        .img-4 {
+            top: 80%;
+            right: 0;
+        }
+
+        .cta-content {
+            .cta-title {
+                h2 {
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+            }
+
+            .btn-cta {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// Footer Section
+footer {
+    padding: 80px 0;
+}
