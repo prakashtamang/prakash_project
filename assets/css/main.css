@@ -126,8 +126,32 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 10px;
     margin-right: 10px;
   }
-  .site-navbar .site-menu li:last-child {
-    margin-right: 0;
+  .site-navbar .has-children {
+    position: relative;
+  }
+  .site-navbar .has-children > .dropdown {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 100%;
+    padding: 0;
+    border-top: 2px solid #B6EC2E;
+    background: #FFF;
+    margin-top: 5px;
+    padding: 5px;
+    transition: 0.2s ease;
+  }
+  .site-navbar .has-children > .dropdown > li {
+    min-width: 110px;
+    padding-left: 25px;
+    margin: 5px 0;
+  }
+  .site-navbar .has-children > .dropdown > li a {
+    display: block;
+  }
+  .site-navbar .has-children:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
   }
 }
 @media (max-width: 1199.98px) {
@@ -183,6 +207,17 @@ h1, h2, h3, h4, h5, h6 {
   }
   .site-navbar .site-menu li a.btn-getstarted {
     display: inline-block;
+  }
+  .site-navbar .dropdown {
+    display: none;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  .site-navbar .dropdown li {
+    padding: 8px 0;
+  }
+  .site-navbar .dropdown-active {
+    display: block;
   }
   .menu-toggle {
     cursor: pointer;

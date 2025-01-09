@@ -131,6 +131,8 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
 
+        
+
         .site-menu {
             margin: 0;
             padding: 0;
@@ -153,9 +155,38 @@ h1, h2, h3, h4, h5, h6 {
                     }
                 }
             }
+        
+        }
 
-            li:last-child{
-                margin-right: 0;
+        .has-children {
+            position: relative;
+
+            > .dropdown {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                top: 100%;
+                padding: 0;
+                border-top: 2px solid #B6EC2E;
+                background: #FFF;
+                margin-top: 5px;
+                padding: 5px;
+                transition: 0.2s ease;
+
+                > li {
+                    min-width: 110px;
+                    padding-left: 25px;
+                    margin: 5px 0;
+
+                    a {
+                        display: block;
+                    }
+                }
+            }
+
+            &:hover .dropdown{
+                visibility: visible;
+                opacity: 1;
             }
         }
     }
@@ -223,6 +254,19 @@ h1, h2, h3, h4, h5, h6 {
                 display: inline-block;
             }
         }
+    }
+
+    .dropdown {
+        display: none;
+        margin-top: 5px;
+        margin-left: 10px;
+
+        li {
+            padding: 8px 0;
+        }
+    }
+    .dropdown-active {
+        display: block;
     }
    }
    .menu-toggle {

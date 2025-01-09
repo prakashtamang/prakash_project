@@ -16,6 +16,15 @@
         })
     });
 
+    // Toggle Mobile Nav Dropdown
+    document.querySelectorAll('.site-menu .toggle-dropdown').forEach(navmenu => {
+        navmenu.addEventListener('click', function(e) {
+          e.preventDefault();
+          this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+          e.stopImmediatePropagation();
+        });
+      });
+
     // Initialize Swiper 
 
     const swiper = new Swiper('.swiper', {
