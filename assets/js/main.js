@@ -67,4 +67,13 @@
             faqItem.parentNode.classList.toggle('faq-active');
         });
     });
+
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+      });
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "I" && (e.ctrlKey || e.metaKey)) {
+          e.preventDefault();
+        }
+      });
 })();
