@@ -28,9 +28,9 @@
     // Initialize Swiper 
 
     const swiper = new Swiper('.swiper', {
-        // autoplay: {
-        //     delay: 5000,
-        // },
+        autoplay: {
+            delay: 3000,
+        },
 
       
         // Optional parameters
@@ -68,12 +68,13 @@
         });
     });
 
+    // Disable right click and inspect element on broswer
     document.addEventListener("contextmenu", function(e) {
         e.preventDefault();
-      });
-      document.addEventListener("keydown", function(e) {
+    });
+    document.addEventListener("keydown", function(e) {
         if (e.key === "I" && (e.ctrlKey || e.metaKey)) {
           e.preventDefault();
         }
-      });
+    });
 })();

@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: $darkgreen-color;
     padding: 10px 28px;
     border-radius: 6px;
+
+    &:hover {
+        background-color: lighten($darkgreen-color, 5%);
+    }
 }
 
 .section-title {
@@ -153,6 +157,11 @@ h1, h2, h3, h4, h5, h6 {
                         margin-left: 10px;
                         margin-right: 10px;
                     }
+
+                    .login-icon {
+                        width: 18px;
+                        height: 18px;
+                    }
                 }
             }
         
@@ -160,6 +169,11 @@ h1, h2, h3, h4, h5, h6 {
 
         .has-children {
             position: relative;
+
+            .toggle-dropdown {
+                width: 20px;
+                height: 20px;
+            }
 
             > .dropdown {
                 position: absolute;
@@ -249,11 +263,21 @@ h1, h2, h3, h4, h5, h6 {
                     margin-left: 10px;
                     margin-right: 10px;
                 }
+
+                .login-icon {
+                    width: 18px;
+                    height: 18px;
+                }
             }
             a.btn-getstarted {
                 display: inline-block;
             }
         }
+    }
+
+    .toggle-dropdown {
+        width: 22px;
+        height: 22px;
     }
 
     .dropdown {
@@ -342,6 +366,11 @@ h1, h2, h3, h4, h5, h6 {
             margin-top: 40px;
             border: 1px solid #92F564;
             background: #B6EC2E;
+
+            &:hover {
+                border: 1px solid #92F564;
+                background: darken(#B6EC2E, 10%);
+            }
         }
     }
 
@@ -711,11 +740,13 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .service-item {
+        cursor: pointer;
         background: #fff;
         border-radius: 12px;
         border: 1px solid #E6FBB8;
         padding: 40px;
         height: 100%;
+        transition: 0.3s ease-in-out;
 
         .service-icon {
             padding-bottom: 20px;
@@ -728,6 +759,10 @@ h1, h2, h3, h4, h5, h6 {
         .service-title {
             font-size: 24px;
             font-weight: 500;
+        }
+
+        &:hover {
+            box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
         }
     }
 }
@@ -926,6 +961,10 @@ h1, h2, h3, h4, h5, h6 {
             font-weight: 500;
             margin-top: 30px;
             padding: 10px 20px;
+
+            &:hover {
+                background: darken(#18A23F, 5%);
+            }
         }
     }
 
@@ -992,6 +1031,11 @@ footer {
 
                     a {
                         color: #6B7280;
+                        transition: 0.2s ease-in-out;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
