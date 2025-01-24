@@ -1,4 +1,5 @@
 (function(){
+    // Apply scrolled class to the body as the page is scolled down
     function toggleScrolled(){
         const selectBody = document.querySelector('body');
         const selectHeader = document.querySelector('#header');
@@ -16,6 +17,15 @@
         })
     });
 
+    // Hide Mobile nav on same-page/hash links
+    document.querySelectorAll('.site-navbar a').forEach((navmenu)=>{
+        navmenu.addEventListener('click', ()=>{
+            if(document.querySelector('.mobile-nav-active')){
+                document.querySelector('body').classList.toggle('mobile-nav-active');
+            }
+        })
+    });
+
     // Toggle Mobile Nav Dropdown
     document.querySelectorAll('.site-menu .toggle-dropdown').forEach(navmenu => {
         navmenu.addEventListener('click', function(e) {
@@ -25,14 +35,12 @@
         });
       });
 
-    // Initialize Swiper 
 
+    // Initialize Swiper 
     const swiper = new Swiper('.swiper', {
         autoplay: {
             delay: 3000,
         },
-
-      
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -42,8 +50,6 @@
           el: '.swiper-pagination',
           clickable: true,
         },
-
-       
 
         // Default parameters
         slidesPerView: "auto",
@@ -67,14 +73,4 @@
             faqItem.parentNode.classList.toggle('faq-active');
         });
     });
-
-    // Disable right click and inspect element on broswer
-    // document.addEventListener("contextmenu", function(e) {
-    //     e.preventDefault();
-    // });
-    // document.addEventListener("keydown", function(e) {
-    //     if (e.key === "I" && (e.ctrlKey || e.metaKey)) {
-    //       e.preventDefault();
-    //     }
-    // });
 })();
