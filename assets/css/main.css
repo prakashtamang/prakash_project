@@ -624,7 +624,7 @@ h1, h2, h3, h4, h5, h6 {
 .features .features-wrapper .feature-item:nth-of-type(5) .feature-img svg {
   margin-right: -30px;
   margin-bottom: -30px;
-  transform: scale(0.9);
+  transform: scale(0.8);
   border-radius: 12px;
 }
 .features .features-wrapper .feature-item:nth-of-type(5) .feature-img svg .item-1,
